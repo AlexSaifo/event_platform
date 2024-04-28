@@ -5,6 +5,7 @@ export interface ICategory extends Document {
   name: string;
 }
 
+
 const CategorySchema = new Schema({
   name: { type: String, required: true, unique: true },
 });

@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import HeroSection from "./components/HeroSection";
 import EventsSection from "./components/EventsSection";
+import { SearchParamProps } from "@/types";
 
-export default function Home() {
+export default function Home({ searchParams }: SearchParamProps) {
   return (
-    <main className=" h-[1000px]">
+    <main className="">
       <HeroSection />
-      <EventsSection />
+      <EventsSection searchParams={searchParams}/>
     </main>
   );
 }
